@@ -200,3 +200,22 @@
 	transform: rotate(45deg);
 
 }
+
+
+@media screen and (max-width: 840px) {
+	.form-box-text{
+		display: none;
+	}
+
+	.signup-form{
+		flex-direction: column;
+	}
+
+	.signup-form-social{
+		margin-top: 20px;
+	}
+
+	.signup-form-social li:first-child{
+		margin-left: 0;
+	}
+}
