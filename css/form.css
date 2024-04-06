@@ -1,0 +1,202 @@
+.form-wrapper {
+	background: var(--colorRed);
+	color: var(--colorWhite);
+
+}
+
+.form-wrapper .helper {
+	position: relative;
+	z-index: 2;
+}
+
+.form-wrap {
+	position: relative;
+}
+
+.form-wrap-img {
+	background-image: url('/assets/img/big-red-round.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	opacity: .3;
+}
+
+.form-wrapper h2 {
+	max-width: 640px;
+}
+
+.form-wrapper .subtitle {
+	max-width: 480px;
+}
+
+.signup-form {
+	display: flex;
+	align-items: center;
+}
+
+
+.signup-form-inp {}
+
+.signup-form-inp--phone {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.signup-form-inp--phone label {
+	padding-bottom: 10px;
+}
+
+.signup-form-inp--phone input {
+	height: 60px;
+	border: 1px solid var(--colorWhite);
+	outline: none;
+	background: transparent;
+	border-radius: 2px;
+	padding-left: 20px;
+}
+
+.signup-form-inp--check {
+	max-width: 300px;
+	margin-bottom: 10px;
+}
+
+/* .signup-form-inp--check input[type='checkbox']{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+} */
+
+.signup-form-inp--check span,
+.signup-form-inp--check a {
+	line-height: 1.1;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Fira Code', Arial, sans-serif;
+}
+
+.signup-form-inp--check a {
+	text-decoration: underline;
+}
+
+
+.signup-form-social {
+	display: flex;
+	align-items: center;
+}
+
+.signup-form-social li {
+	margin-left: 20px;
+}
+
+.signup-form-social li:first-child {
+	margin-left: 40px;
+}
+
+
+.signup-form-social li.tg svg {
+	width: 54px;
+	height: 54px;
+}
+
+.signup-form-social li.wp svg {
+	width: 48px;
+	height: 48px;
+	/* margin-top: 8px; */
+}
+
+
+
+
+.form-box-text div {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: var(--colorRed);
+	margin-right: auto;
+}
+
+.form-box-text {
+	width: 260px;
+	transform: rotate(-5deg);
+	background: var(--bgWhite);
+	color: var(--colortext);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	z-index: 2;
+	font-weight: 700;
+}
+
+
+.form-box-text::after {
+	width: 50px;
+	height: 50px;
+	content: '';
+	background-image: url('../assets/img/wave-black.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 10px;
+	right: -15px;
+	z-index: 3;
+}
+
+
+.signup-form-inp--btn input {
+	width: 300px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	color: var(--colortext);
+	border-radius: 2px;
+	font-size: 14px;
+	font-family: "Fira Code", Arial, sans-serif;
+	background: var(--bgWhite);
+	outline: none;
+	border: none;
+}
+
+
+
+
+.signup-form-inp--check input[type='checkbox'] {
+	display: none;
+}
+
+
+.signup-form-inp--check input[type='checkbox']+label {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	border: 1px solid var(--colorWhite);
+	position: relative;
+}
+
+.signup-form-inp--check input[type='checkbox']:checked+label::after {
+	content: '';
+	position: absolute;
+	left: 5px;
+	top: 1px;
+	width: 3px;
+	height: 8px;
+	border: solid var(--colorWhite);
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+
+}

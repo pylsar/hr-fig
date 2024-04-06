@@ -1,0 +1,70 @@
+.popup-box {
+	display: none;
+}
+
+.popup-box.isShown {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background: var(--bgWhite);
+	display: block;
+}
+
+.popup-box .popup-content {
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	text-align: center;
+}
+
+.popup-box .calc-person {
+	border: 1px solid red;
+}
+
+.popup-box .signup-form {
+	border: 1px solid red;
+}
+
+.popup-box .popup-title {
+	display: flex;
+	flex-direction: column;
+	max-width: 480px;
+	margin: 40px auto;
+}
+
+.popup-box .popup-title p {
+	color: var(--colortext);
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Fira Code';
+}
+
+.popup-box .popup-title p.last {
+	color: var(--colortext);
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Fira Code';
+}
+
+.popup-box .calc-person .bold {
+	font-size: 20px;
+	font-family: 'Fira Code';
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.popup-box .calc-person .light {
+	font-size: 14px;
+	font-family: 'Fira Code';
+	margin-bottom: 15px;
+	opacity: .7;
+}
+
+.popup-box input[type="number"] {
+	color: var(--colortext);
+}

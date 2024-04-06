@@ -1,0 +1,103 @@
+body{
+    background: var(--bgGray);
+}
+
+.more__items {
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.more__item {
+	width: calc(33.33% - 27px);
+	margin-right: 40px;
+    margin-bottom: 40px;
+	background: var(--bgWhite);
+	position: relative;
+	z-index: 2;
+	padding: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.more__item:nth-child(3n + 3) {
+    margin-right: 0;
+}
+
+.more__item:last-child {
+	margin-right: 0px;
+}
+
+.more__item-img {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: -36px;
+}
+
+.more__item-img::after {
+
+	width: 72px;
+	height: 72px;
+	color: var(--bgWhite);
+	font-weight: 700;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.more__item--one .more__item-img::after {
+	content: 'АП';
+}
+
+.more__item--two .more__item-img::after {
+	content: 'РВЗ';
+}
+
+.more__item--three .more__item-img::after {
+	content: 'IT';
+}
+.more__item--four .more__item-img::after {
+	content: 'ТП';
+}
+.more__item--five .more__item-img::after {
+	content: 'МП';
+}
+.more__item--six .more__item-img::after {
+	content: 'АП';
+}
+
+.more__item--seven .more__item-img::after {
+	content: 'УВ';
+}
+.more__item--eight .more__item-img::after {
+	content: 'СНП';
+}
+.more__item--nine .more__item-img::after {
+	content: 'ЛП';
+}
+.more__item--ten .more__item-img::after {
+	content: 'СБП';
+}
+.more__item--eleven .more__item-img::after {
+	content: 'ФК';
+}
+.more__item--twelve .more__item-img::after {
+	content: 'НН';
+}
+
+.more__item-img::before {
+	content: '';
+	width: 90px;
+	height: 90px;
+	color: var(--bgWhite);
+	font-weight: 700;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border: 1px dashed var(--colortext);
+	border-radius: 50%;
+	opacity: .2;
+}
