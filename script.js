@@ -56,32 +56,6 @@ $(window).scroll(function () {
 
 
 
-// function scrollMenu(){
-//     if ( $(window).width() <= 960 ){
-//         $('.menu-fix').removeClass('isFixed');
-//     } else {
-// 		$(window).scroll(function () {
-// 			if ($(this).scrollTop() > offset.top) {
-// 				$('.menu-fix').addClass('isFixed');
-// 			} else {
-// 				$('.menu-fix').removeClass('isFixed');
-// 			}
-// 		});
-//     }
-// }
-
-// $(window).on("load resize",function(){
-//     scrollMenu()
-// });
-
-// scrollMenu()
-
-
-
-
-
-
-
 function calc() {
 	$('.calcId').on('input', function (e) {
 		let num = $('.calcId').val();
@@ -110,8 +84,24 @@ calcPopup();
 
 
 
+// МЕНЮ
+const burgerBtn = document.querySelector('.burger .helper');
+const menu = document.querySelector('.menu-fix');
+const burger = document.querySelector('.burger');
+const wrap = document.querySelector('.dark-wrapper');
 
-$('.burger').on('click', function () {
-	$('.menu-fix').toggleClass('isOpen');
-	$(this).toggleClass('isShown');
-})
+
+$(document).on("click", function (event) {
+	if (burgerBtn == event.target) {
+		$(menu).toggleClass("isOpen");
+		$(burger).toggleClass('isShown'); 
+		$(wrap).toggleClass('isDarked');
+	}
+
+	if ( burgerBtn !== event.target &&
+		$(event.target).closest(menu).length == 0 ) {
+		$(menu).removeClass("isOpen");
+		$(burger).removeClass('isShown');
+		$(wrap).removeClass('isDarked');
+	}
+});

@@ -238,10 +238,12 @@ header {
 
 .menu-fix .menu-list ul {
 	display: flex;
+	width: 100%;
+	justify-content: space-around;
 }
 
 .menu-fix .menu-list ul li:not(:first-child) {
-	margin-left: 30px;
+	/* margin-left: 30px; */
 }
 
 .menu-fix .menu-list ul li,
@@ -266,6 +268,12 @@ header {
 	margin-left: 40px;
 }
 
+
+.menu-fix .menu-phone .btn,
+.menu-fix .menu-phone a {
+	font-family: 'Fira Code', Arial, sans-serif;
+}
+
 .header-img-title {
 	display: none;
 }
@@ -284,6 +292,18 @@ header {
 	.menu-list ul {
 		justify-content: flex-start;
 		padding-left: 40px;
+	}
+
+	.menu-fix.isFixed .menu-list ul li{
+		margin-right: 0;
+	}
+
+	.menu-fix.isFixed .menu-list ul li:first-child{
+		width: auto;
+		margin-bottom: 0;
+	}
+	.menu-fix.isFixed .menu-list ul {
+		padding-left: 0;
 	}
 }
 
@@ -366,7 +386,17 @@ header {
 		border-radius: 50%;
 	}
 
-	.burger span:first-child{
+	.burger .helper{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 104;
+		border-radius: 50%;
+	}
+
+	.burger span.top{
 		display: block;
 		width: 30px;
 		height: 4px;
@@ -376,7 +406,7 @@ header {
 		top: 20px;
 	}
 
-	.burger span:nth-child(2){
+	.burger span.center{
 		position: absolute;
 		display: block;
 		width: 30px;
@@ -387,7 +417,7 @@ header {
 	}
 
 
-	.burger span:last-child{
+	.burger span.bottom{
 		display: block;
 		width: 30px;
 		height: 4px;
@@ -397,16 +427,16 @@ header {
 		top: 36px;
 	}
 
-	.burger.isShown span:nth-child(2){
+	.burger.isShown span.center{
 		display: none;
 	}
 
-	.burger.isShown span:first-child{
+	.burger.isShown span.top{
 		transform: rotate(45deg);
 		top: 26px;
 	}
 
-	.burger.isShown span:last-child{
+	.burger.isShown span.bottom{
 		transform: rotate(-45deg);
 		top: 27px;
 	}
@@ -420,15 +450,82 @@ header {
 		width: 300px;
 		z-index: 101;
 		display: flex;
-		
-		background: yellow;
+		user-select: none;
+		background: var(--bgWhite);
+	}
+
+	.dark-wrapper{
+		display: none;
+	}
+	.dark-wrapper.isDarked{
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 90;
+		background: #000;
+		opacity: .6;
 	}
 
 	.menu-fix.isOpen .menu-content{
 		height: 100vh;
 		flex-direction: column;
 		justify-content: space-between;
+		padding: 0 10px;
 	}
+
+	.menu-fix.isOpen .menu-logo {
+		width: 100%;
+		align-items: flex-start;
+		margin-top: 30px;
+	}
+
+	.menu-fix.isOpen .menu-logo a span{
+		font-size: 26px;
+	}
+
+	.menu-fix.isOpen .menu-list{
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.menu-fix.isOpen .menu-list ul {
+		flex-direction: column;
+		margin-left: 0;
+		padding-left: 0;
+		margin-top: 40px;
+		align-items: flex-start;
+	}
+
+	.menu-fix.isOpen .menu-list ul li{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.menu-fix.isOpen .menu-list ul li:first-child{
+		margin-bottom: 0;
+	}
+
+	.menu-fix.isOpen .menu-phone{
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+	.menu-fix.isOpen .menu-phone a{
+		display: block;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.menu-fix.isOpen .menu-phone .btn{
+		margin-left: auto;
+		margin-right: auto;
+		height: 60px;
+	} 
 }
 
 @media screen and (max-width: 640px) {
